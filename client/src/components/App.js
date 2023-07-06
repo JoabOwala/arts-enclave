@@ -1,14 +1,13 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './NavBar'
+import Header from "./Header";
+import ArtsPage from "./ArtsPage";
 
 function App() {
     return (
-        <Router>
-            <Navbar />
-            <h1>ArtsEnclave</h1>
-        </Router>
-    )
+        <div className="app">
+        <Header />
+        <ArtsPage />
+    </div>
+    );
 }
 
-export default App
+export default App;
