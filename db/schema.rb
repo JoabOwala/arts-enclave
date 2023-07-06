@@ -10,30 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_04_092617) do
-  create_table "artists", force: :cascade do |t|
-    t.string "name"
-    t.string "bio"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "arts", force: :cascade do |t|
-    t.string "title"
-    t.string "description"
-    t.string "image_url"
-    t.string "medium"
-    t.integer "year"
-    t.decimal "price"
-    t.integer "collector_id"
-    t.integer "artist_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "collectors", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
+ActiveRecord::Schema[7.0].define(version: 2023_07_06_190700) do
+  create_table "users", force: :cascade do |t|
+    t.string "username"
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

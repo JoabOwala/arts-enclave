@@ -1,0 +1,33 @@
+.art-form-container {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.art-form-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.art-form-container input[type="text"],
+.art-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.art-form-container button {
+    padding: 10px 20px;
+    background-color: #008080;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.art-form-container button:hover {
+    background-color: #006666;
+}

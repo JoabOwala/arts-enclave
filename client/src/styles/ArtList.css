@@ -1,0 +1,44 @@
+.art-list-container {
+    margin-top: 20px;
+}
+
+.art-list-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.art-list-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.art-list-container li {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.art-list-container li h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.art-list-container li p {
+    color: #666;
+}
+
+.art-list-container li button {
+    padding: 10px 20px;
+    background-color: #008080;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.art-list-container li button:hover {
+    background-color: #006666;
+    }
