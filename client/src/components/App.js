@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Switch, Route } from "react-router-dom";
 import "../styles/App.css";
 import NavigationBar from "./NavigationBar";
 import Header from "./Header";
 import Login from "./Login";
 import SignUp from "./SignUp";
 import ArtForm from "./ArtForm";
-import ArtList from "./ArtList";
+//import ArtList from "./ArtList";
 import HomePage from "./HomePage";
 
 function App() {
@@ -29,6 +29,7 @@ function App() {
           <Switch>
             <Route path="/">
               <HomePage user={user}/>
+              <ArtForm />
             </Route>
           </Switch>
         ) : (
