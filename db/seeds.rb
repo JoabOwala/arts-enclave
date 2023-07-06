@@ -12,7 +12,8 @@ puts "✅ Done seeding!"
 
 puts "🖼️ Seeding Arts..."
 # Creating Arts
-art1 = Art.create(
+Art.create!([
+{
     title: 'The Starry Night',
     description: 'A famous oil painting depicting a starry night sky.',
     image_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1200px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg',
@@ -21,9 +22,8 @@ art1 = Art.create(
     price: 5000,
     artist: artist1,
     collector: collector1
-)
-
-art2 = Art.create(
+},
+{
     title: 'Mona Lisa',
     description: 'An iconic portrait of a woman with an enigmatic smile.',
     image_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1200px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg',
@@ -32,9 +32,10 @@ art2 = Art.create(
     price: 1000000,
     artist: artist2,
     collector: collector2
-)
 
-art3 = Art.create(
+},
+{
+
     title: 'Sunflowers',
     description: 'A vibrant still-life painting of sunflowers in a vase.',
     image_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Vincent_Willem_van_Gogh_127.jpg/1200px-Vincent_Willem_van_Gogh_127.jpg',
@@ -43,6 +44,8 @@ art3 = Art.create(
     price: 3000,
     artist: artist1,
     collector: collector2
-)
+}
+])
+
 puts "✅ Done seeding!"
 
