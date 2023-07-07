@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+//import { useHistory } from "react-router-dom";
 import "../styles/ArtForm.css";
 
 function ArtForm({ user }) {
-  const history = useHistory();
+  // const history = useHistory();
   const [artwork, setArtwork] = useState({
     title: "",
     image: "",
@@ -31,21 +31,19 @@ function ArtForm({ user }) {
     })
       .then((response) => response.json())
       .then((newArtwork) => {
-        // Handle successful submission and add the new artwork to the user's collection
-        // You can update the state or make an API call to fetch the updated artworks list
         console.log("New artwork:", newArtwork);
         window.location.reload(); // Refresh the page
       })
       .catch((error) => {
-        // Handle error
         console.error("Error adding artwork:", error);
       });
   };
 
   return (
-    <div className="artform-container">
+    <div className="card">
       <h2>Add Artwork</h2>
       <form onSubmit={handleSubmit}>
+        
         <input
           type="text"
           name="title"

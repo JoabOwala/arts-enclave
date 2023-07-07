@@ -1,14 +1,31 @@
 import React from "react";
 import "../styles/ArtItem.css";
 
-function ArtItem({ artwork }) {
+function ArtItem({ artwork, onDeleteArt}) {
+  const {id, image,title,artist,year,description} = artwork;
+
+  function handleDeleteArt() {
+    fetch(`/artworks/${id}`, {
+      method: "DELETE",
+    }).then((r) => {
+      if (r.ok) {
+        onDeleteArt(artwork);
+      }
+    });
+  }
   return (
-    <div className="art-item-container">
-      <img src={artwork.image} alt={artwork.title} />
-      <h3>{artwork.title}</h3>
-      <p>{artwork.artist}</p>
-      <p>{artwork.year}</p>
-      <p>{artwork.description}</p>
+    <div className="art-item card">
+      <img src={image} alt={title} />
+      <div className="details">
+      <h3>{title}</h3>
+      <p>{artist}</p>
+      <p>{year}</p>
+      <p>{description}</p>
+
+      <p>
+          <button onClick={handleDeleteArt}>Delete Art</button>
+        </p>
+      </div>
     </div>
   );
 }
