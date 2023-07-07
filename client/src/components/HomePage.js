@@ -1,7 +1,4 @@
-import React from "react";
-
-function HomePage({user}) {
-
+function HomePage({ user }) {
   if (user) {
     return <h1>Welcome, {user.username}!</h1>;
   } else {

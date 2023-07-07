@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Switch, Route } from "react-router-dom";
-import "../styles/App.css";
-import NavigationBar from "./NavigationBar";
-import Header from "./Header";
-import Login from "./Login";
+import { Switch, Route } from "react-router-dom";
 import SignUp from "./SignUp";
-import ArtForm from "./ArtForm";
-//import ArtList from "./ArtList";
+import Login from "./Login";
+import NavigationBar from "./NavigationBar";
 import HomePage from "./HomePage";
 
 function App() {
@@ -20,16 +16,15 @@ function App() {
       }
     });
   }, []);
+
   return (
-     <>
-     <Header/>
+    <>
       <NavigationBar user={user} setUser={setUser} />
       <main>
         {user ? (
           <Switch>
             <Route path="/">
               <HomePage user={user}/>
-              <ArtForm />
             </Route>
           </Switch>
         ) : (
