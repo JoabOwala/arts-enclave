@@ -1,4 +1,4 @@
-.navigation-bar {
+/* .navigation-bar {
     background-color: #333;
     color: #fff;
     padding: 10px;
@@ -14,7 +14,7 @@
 
 .navigation-bar li {
     margin: 0 15px;
-    /* Increase the spacing between items */
+    
 }
 
 .navigation-bar li a {
@@ -26,4 +26,4 @@
 
 .navigation-bar li a:hover {
     color: #ff9900;
-}
+} */

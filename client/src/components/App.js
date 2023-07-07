@@ -3,8 +3,10 @@ import { Switch, Route } from "react-router-dom";
 import SignUp from "./SignUp";
 import Login from "./Login";
 import NavigationBar from "./NavigationBar";
+import Header from "./Header";
 import HomePage from "./HomePage";
 import ArtForm from "./ArtForm";
+
 
 function App() {
   const [user, setUser] = useState(null);
@@ -20,6 +22,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <NavigationBar user={user} setUser={setUser} />
       <main>
         {user ? (
