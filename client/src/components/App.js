@@ -4,6 +4,7 @@ import SignUp from "./SignUp";
 import Login from "./Login";
 import NavigationBar from "./NavigationBar";
 import HomePage from "./HomePage";
+import ArtForm from "./ArtForm";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -25,6 +26,7 @@ function App() {
           <Switch>
             <Route path="/">
               <HomePage user={user}/>
+              <ArtForm />
             </Route>
           </Switch>
         ) : (
