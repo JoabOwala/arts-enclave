@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import "../styles/ArtForm.css";
 
-function ArtForm() {
+function ArtForm({ user }) {
+  const history = useHistory();
   const [artwork, setArtwork] = useState({
     title: "",
     artist: "",
@@ -19,7 +21,23 @@ function ArtForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
+    fetch("/artworks", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ ...artwork, user_id: user.id }),
+    })
+      .then((response) => response.json())
+      .then((newArtwork) => {
+        // Handle successful submission and add the new artwork to the user's collection
+        // You can update the state or make an API call to fetch the updated artworks list
+        console.log("New artwork:", newArtwork);
+      })
+      .catch((error) => {
+        // Handle error
+        console.error("Error adding artwork:", error);
+      });
   };
 
   return (

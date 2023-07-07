@@ -26,7 +26,7 @@ function App() {
           <Switch>
             <Route path="/">
               <HomePage user={user}/>
-              <ArtForm />
+              <ArtForm user={user}/>
             </Route>
           </Switch>
         ) : (

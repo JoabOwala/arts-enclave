@@ -1,19 +1,19 @@
 import React from "react";
+import ArtItem from "./ArtItem";
 import "../styles/ArtList.css";
 
-function ArtList() {
-  const artworks = []; // Array of artworks
+function ArtList({ user, artworks }) {
+  if (!Array.isArray(artworks)) {
+    return <p>No artworks available.</p>;
+  }
+  
+  const userArtworks = artworks.filter(artwork => artwork.user_id === user.id);
 
   return (
     <div className="artlist-container">
       <h2>Art List</h2>
-      {artworks.map((artwork) => (
-        <div key={artwork.id} className="art-item">
-          <img src={artwork.image} alt={artwork.title} />
-          <h3>{artwork.title}</h3>
-          <p>{artwork.artist}</p>
-          <p>{artwork.year}</p>
-        </div>
+      {userArtworks.map((artwork) => (
+        <ArtItem key={artwork.id} artwork={artwork} />
       ))}
     </div>
   );
