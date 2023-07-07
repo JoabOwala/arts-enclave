@@ -6,9 +6,10 @@ function ArtForm({ user }) {
   const history = useHistory();
   const [artwork, setArtwork] = useState({
     title: "",
+    image: "",
     artist: "",
-    description: "",
     year: "",
+    description: "",
   });
 
   const handleInputChange = (e) => {
@@ -33,6 +34,7 @@ function ArtForm({ user }) {
         // Handle successful submission and add the new artwork to the user's collection
         // You can update the state or make an API call to fetch the updated artworks list
         console.log("New artwork:", newArtwork);
+        window.location.reload(); // Refresh the page
       })
       .catch((error) => {
         // Handle error
@@ -53,24 +55,31 @@ function ArtForm({ user }) {
         />
         <input
           type="text"
+          name="image"
+          placeholder="Image"
+          value={artwork.image}
+          onChange={handleInputChange}
+        />
+        <input
+          type="text"
           name="artist"
           placeholder="Artist"
           value={artwork.artist}
           onChange={handleInputChange}
         />
+          <input
+            type="text"
+            name="year"
+            placeholder="Year"
+            value={artwork.year}
+            onChange={handleInputChange}
+          />
         <textarea
           name="description"
           placeholder="Description"
           value={artwork.description}
           onChange={handleInputChange}
         ></textarea>
-        <input
-          type="text"
-          name="year"
-          placeholder="Year"
-          value={artwork.year}
-          onChange={handleInputChange}
-        />
         <button type="submit">Submit</button>
       </form>
     </div>

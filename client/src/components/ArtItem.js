@@ -8,6 +8,7 @@ function ArtItem({ artwork }) {
       <h3>{artwork.title}</h3>
       <p>{artwork.artist}</p>
       <p>{artwork.year}</p>
+      <p>{artwork.description}</p>
     </div>
   );
 }
