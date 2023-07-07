@@ -4,7 +4,7 @@ import "../styles/ArtItem.css";
 function ArtItem({ artwork, onDeleteArt}) {
   const {id, image,title,artist,year,description} = artwork;
 
-  function handleDeleteArt() {
+  function handleDeleteArt(artwork) {
     fetch(`/artworks/${id}`, {
       method: "DELETE",
     }).then((r) => {
@@ -12,6 +12,7 @@ function ArtItem({ artwork, onDeleteArt}) {
         onDeleteArt(artwork);
       }
     });
+     window.location.reload(); // Refresh the page
   }
   return (
     <div className="art-item card">

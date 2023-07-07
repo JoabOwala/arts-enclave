@@ -14,8 +14,18 @@ class ArtworksController < ApplicationController
     render json: artworks
   end
 
+  #DELETE /artworks/:id
+    def destroy
+        artwork = find_artwork
+        artwork.destroy
+        head :no_content
+    end
+
   private
 
+  def find_artwork
+        Artwork.find(params[:id])
+    end
   def artwork_params
     params.require(:artwork).permit(:title, :artist, :description, :year, :user_id)
   end
