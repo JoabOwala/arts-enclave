@@ -53,12 +53,15 @@ function ArtForm({ user }) {
           onChange={handleInputChange}
         />
         <input
-          type="text"
+          type="url"
           name="image"
           placeholder="Image URL"
-          value={artwork.image}
+          src={artwork.image}
           onChange={handleInputChange}
         />
+        {artwork.image && (
+          <img src={artwork.image} alt={artwork.title} className="prev" />
+        )}
         <input
           type="text"
           name="artist"

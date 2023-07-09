@@ -27,6 +27,6 @@ class ArtworksController < ApplicationController
         Artwork.find(params[:id])
     end
   def artwork_params
-    params.require(:artwork).permit(:title, :artist, :description, :year, :user_id)
+    params.require(:artwork).permit(:title, :image, :artist, :description, :year, :user_id)
   end
 end
