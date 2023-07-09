@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ArtForm from "./ArtForm";
+//import ArtForm from "./ArtForm";
 import ArtList from "./ArtList";
 
 function HomePage({ user }) {

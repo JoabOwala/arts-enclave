@@ -23,16 +23,16 @@ function ArtList({ user, artworks, onDeleteArt }) {
 
   if (!Array.isArray(artworks) || userArtworks.length === 0) {
     return <p>No artworks available.</p>;
-  }
-
-  return (
-    <div className="artlist-container">
+  }else
+  {
+    return (
+      <div className="artlist-container">
       <h2>Art List</h2>
       {userArtworks.map((artwork) => (
         <ArtItem key={artwork.id} artwork={artwork} onDeleteArt={handleDeleteArt} />
-      ))}
+        ))}
     </div>
-  );
+  );}
 }
 
 export default ArtList;

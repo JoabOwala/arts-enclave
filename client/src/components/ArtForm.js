@@ -33,6 +33,7 @@ function ArtForm({ user }) {
       .then((newArtwork) => {
         console.log("New artwork:", newArtwork);
         window.location.reload(); // Refresh the page
+  
       })
       .catch((error) => {
         console.error("Error adding artwork:", error);
@@ -47,14 +48,14 @@ function ArtForm({ user }) {
         <input
           type="text"
           name="title"
-          placeholder="Title"
+          placeholder="Art Title"
           value={artwork.title}
           onChange={handleInputChange}
         />
         <input
           type="text"
           name="image"
-          placeholder="Image"
+          placeholder="Image URL"
           value={artwork.image}
           onChange={handleInputChange}
         />

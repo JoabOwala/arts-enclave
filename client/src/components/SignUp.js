@@ -19,7 +19,8 @@ function SignUp({ setUser }) {
       }),
     }).then((r) => {
       if (r.ok) {
-        r.json().then((user) => setUser(user));
+        window.location.href = "/login"; // Redirect to the login page
+        // r.json().then((user) => setUser(user));
       }
     });
   }
